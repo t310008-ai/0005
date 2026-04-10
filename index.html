@@ -11,17 +11,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
         
         :root {
-            /* 主要莫蘭迪藍色系列 */
-            --morandi-blue-bg: #D9E3EB;    /* 網頁底色 (更亮的莫蘭迪藍) */
-            --morandi-blue-main: #5E718B;  /* 核心主色 */
-            --morandi-blue-deep: #4A5D75;  /* 深色 (文字用) */
-            --morandi-text: #3D4151;       /* 主要文字顏色 */
-            --card-bg: rgba(255, 255, 255, 0.9); /* 卡片背景 (微透明白) */
+            --morandi-blue-bg: #D9E3EB;
+            --morandi-blue-main: #5E718B;
+            --morandi-blue-deep: #4A5D75;
+            --morandi-text: #3D4151;
+            --card-bg: rgba(255, 255, 255, 0.9);
         }
 
         body { 
             font-family: 'Noto Sans TC', sans-serif; 
-            /* 修改底色 */
             background-color: var(--morandi-blue-bg); 
             color: var(--morandi-text);
             overflow-x: hidden; 
@@ -34,7 +32,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* 下拉選單通用樣式 */
         .dropdown-menu {
             display: none;
             padding-top: 20px; 
@@ -47,9 +44,9 @@
         .collego-card {
             background: var(--card-bg);
             border-radius: 12px;
-            border: 1px solid rgba(94, 113, 139, 0.2); /* 微藍色邊框 */
+            border: 1px solid rgba(94, 113, 139, 0.2);
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            backdrop-filter: blur(5px); /* 磨砂玻璃效果 */
+            backdrop-filter: blur(5px);
         }
         .collego-card:hover {
             transform: translateY(-5px);
@@ -72,7 +69,7 @@
             align-items: center;
             height: 100%;
             font-weight: 500;
-            color: #555A6F; /* 調整導覽列文字顏色以適應底色 */
+            color: #555A6F;
             transition: color 0.3s ease;
         }
         .nav-item:hover { color: var(--morandi-blue-main); }
@@ -87,39 +84,39 @@
             </div>
             
             <ul class="flex items-center space-x-8 h-full">
-                <li class="h-full"><a onclick="showSection('home')" class="nav-item cursor-pointer text-sm md:text-base">首頁</a></li>
+                <li class="h-full"><a onclick="showSection('home')" class="nav-item cursor-pointer">首頁</a></li>
                 
                 <li class="relative group h-full">
-                    <a class="nav-item cursor-pointer flex items-center text-sm md:text-base">
+                    <a class="nav-item cursor-pointer flex items-center">
                         科目分類 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </a>
                     <div class="dropdown-menu absolute -right-20 w-[400px]">
                         <div class="bg-white/95 shadow-xl rounded-xl border border-gray-100 p-5 grid grid-cols-3 gap-2 text-sm backdrop-blur-sm">
-                            <a onclick="showSection('chinese')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer text-gray-700">國文</a>
-                            <a onclick="showSection('english')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer text-gray-700">英文</a>
-                            <a onclick="showSection('math')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer text-gray-700">數學</a>
-                            <a onclick="showSection('physics')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer text-gray-700">物理</a>
-                            <a onclick="showSection('chemistry')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer text-gray-700">化學</a>
-                            <a onclick="showSection('biology')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer text-gray-700">生物</a>
-                            <a onclick="showSection('geography')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer text-gray-700">地理</a>
-                            <a onclick="showSection('history')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer text-gray-700">歷史</a>
-                            <a onclick="showSection('civics')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer text-gray-700">公民</a>
+                            <a onclick="showSection('chinese')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer">國文</a>
+                            <a onclick="showSection('english')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer">英文</a>
+                            <a onclick="showSection('math')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer">數學</a>
+                            <a onclick="showSection('physics')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer">物理</a>
+                            <a onclick="showSection('chemistry')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer">化學</a>
+                            <a onclick="showSection('biology')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer">生物</a>
+                            <a onclick="showSection('geography')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer">地理</a>
+                            <a onclick="showSection('history')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer">歷史</a>
+                            <a onclick="showSection('civics')" class="p-2 hover:bg-slate-100 rounded text-center cursor-pointer">公民</a>
                             <a onclick="showSection('elective')" class="p-2 bg-slate-100 text-[#5E718B] font-bold rounded text-center col-span-3 cursor-pointer">選修科目</a>
                         </div>
                     </div>
                 </li>
 
                 <li class="relative group h-full">
-                    <a class="nav-item cursor-pointer flex items-center text-sm md:text-base">
+                    <a class="nav-item cursor-pointer flex items-center">
                         多元表現 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </a>
                     <div class="dropdown-menu absolute -right-0 w-[200px]">
                         <div class="bg-white/95 shadow-xl rounded-xl border border-gray-100 p-3 flex flex-col space-y-1 text-sm backdrop-blur-sm">
-                            <a onclick="showSection('ext-competition')" class="p-3 hover:bg-slate-100 rounded cursor-pointer text-gray-700">🏆 競賽紀錄</a>
-                            <a onclick="showSection('ext-club')" class="p-3 hover:bg-slate-100 rounded cursor-pointer text-gray-700">🎭 社團活動</a>
-                            <a onclick="showSection('ext-cadre')" class="p-3 hover:bg-slate-100 rounded cursor-pointer text-gray-700">🎖️ 幹部經歷</a>
-                            <a onclick="showSection('ext-flexible')" class="p-3 hover:bg-slate-100 rounded cursor-pointer text-gray-700">💡 彈性學習</a>
-                            <a onclick="showSection('ext-service')" class="p-3 hover:bg-slate-100 rounded cursor-pointer text-gray-700">🤝 服務學習</a>
+                            <a onclick="showSection('ext-competition')" class="p-3 hover:bg-slate-100 rounded cursor-pointer">🏆 競賽紀錄</a>
+                            <a onclick="showSection('ext-club')" class="p-3 hover:bg-slate-100 rounded cursor-pointer">🎭 社團活動</a>
+                            <a onclick="showSection('ext-cadre')" class="p-3 hover:bg-slate-100 rounded cursor-pointer">🎖️ 幹部經歷</a>
+                            <a onclick="showSection('ext-flexible')" class="p-3 hover:bg-slate-100 rounded cursor-pointer">💡 彈性學習</a>
+                            <a onclick="showSection('ext-service')" class="p-3 hover:bg-slate-100 rounded cursor-pointer">🤝 服務學習</a>
                         </div>
                     </div>
                 </li>
@@ -145,7 +142,7 @@
                         <div class="w-16 h-1 bg-gradient-morandi mb-8"></div>
                     </div>
                     <div class="md:col-span-7 text-lg leading-relaxed text-gray-700">
-                        <p>我是 <span class="text-[#4A4E69] font-bold">[你的姓名]</span>，這份檔案記錄了我高中三年的學術進程與課外多元探索。透過沉穩的莫蘭迪藍色調，展現我理性的思辨精神。點擊上方選單可查閱詳細成果。</p>
+                        <p>我是 <span class="text-[#4A4E69] font-bold">[你的姓名]</span>，這份檔案記錄了我高中三年的學術進程與課外多元探索。點擊上方選單可查閱詳細成果。</p>
                     </div>
                 </div>
             </div>
@@ -158,25 +155,24 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="collego-card p-6 shadow-md hover:shadow-xl">
                     <span class="text-xs font-bold text-[#8E9AAF]">2025.05</span>
-                    <h3 class="text-xl font-bold mt-2 text-[#4A4E69]">全國高中[學科]學科能力競賽</h3>
-                    <p class="text-sm text-gray-600 mt-2">獲[獎項名稱]，在競賽中展現了對[領域]的深度理解與應變能力。</p>
+                    <h3 class="text-xl font-bold mt-2 text-[#4A4E69]">全國高中學科能力競賽</h3>
+                    <p class="text-sm text-gray-600 mt-2">在競賽中展現了對學科領域的深度理解與應變能力。</p>
                 </div>
-                </div>
+            </div>
         </section>
 
-        </main>
+    </main>
 
     <footer class="bg-[#2D3142] text-white py-8 mt-24">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm">
             <div class="font-bold tracking-tight opacity-90 mb-4 md:mb-0">高中學習歷程檔案</div>
-            <div class="text-gray-400">© 2026 [你的姓名] 版權所有. 個人學習歷程專用.</div>
+            <div class="text-gray-400">© 2026 [你的姓名] 版權所有.</div>
         </div>
     </footer>
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        // 學科配置
         const subjects = [
             { id: 'chinese', name: '國文' }, { id: 'english', name: '英文' },
             { id: 'math', name: '數學' }, { id: 'physics', name: '物理' },
@@ -185,36 +181,51 @@
             { id: 'civics', name: '公民' }, { id: 'elective', name: '選修科目' }
         ];
 
-        // 渲染學科區塊
         const container = document.getElementById('subject-container');
         subjects.forEach(sub => {
             const section = document.createElement('section');
             section.id = sub.id;
             section.className = 'content-section max-w-6xl mx-auto px-6 py-20 min-h-[70vh]';
+            
+            // 判斷是否為生物高一，若是則替換連結
+            const isBio = sub.id === 'biology';
+            
             section.innerHTML = `
                 <h2 class="text-3xl font-bold text-[#4A4E69] border-b-4 border-[#5E718B] pb-2 mb-12 inline-block">${sub.name} 學習成果</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    ${['高一 GRADE 10', '高二 GRADE 11', '高三 GRADE 12'].map(grade => `
-                        <div class="collego-card p-8 shadow-md hover:shadow-xl">
-                            <div class="text-xs font-bold text-[#8E9AAF] mb-3">${grade}</div>
-                            <h3 class="text-xl font-bold text-[#4A4E69] mb-4">學科成果紀錄</h3>
-                            <p class="text-sm text-gray-600 mb-8 leading-relaxed">展示在${sub.name}科目的核心發展、實驗記錄或自主探究成果。</p>
-                            <a href="#" class="inline-block px-6 py-2 border border-[#5E718B] text-[#5E718B] rounded-full text-sm font-medium hover:bg-[#5E718B] hover:text-white transition shadow-sm">檢視檔案</a>
-                        </div>
-                    `).join('')}
+                    <div class="collego-card p-8 shadow-md hover:shadow-xl">
+                        <div class="text-xs font-bold text-[#8E9AAF] mb-3">高一 GRADE 10</div>
+                        <h3 class="text-xl font-bold text-[#4A4E69] mb-4">${isBio ? '生物專題報告' : '學科成果紀錄'}</h3>
+                        <p class="text-sm text-gray-600 mb-8 leading-relaxed">${isBio ? '針對生物學科進行的深入探究報告，點擊下方連結查看詳細 Canva 內容。' : '展示在高一科目的核心發展與自主探究。'}</p>
+                        <a href="${isBio ? 'https://canva.link/0xui8q274ej88pz' : '#'}" 
+                           ${isBio ? 'target="_blank"' : ''} 
+                           class="inline-block px-6 py-2 border border-[#5E718B] text-[#5E718B] rounded-full text-sm font-medium hover:bg-[#5E718B] hover:text-white transition shadow-sm">
+                           ${isBio ? '開啟 Canva 報告' : '檢視檔案'}
+                        </a>
+                    </div>
+                    <div class="collego-card p-8 shadow-md hover:shadow-xl">
+                        <div class="text-xs font-bold text-[#8E9AAF] mb-3">高二 GRADE 11</div>
+                        <h3 class="text-xl font-bold text-[#4A4E69] mb-4">學科成果紀錄</h3>
+                        <p class="text-sm text-gray-600 mb-8 leading-relaxed">展示在高二科目的深化研究成果。</p>
+                        <a href="#" class="inline-block px-6 py-2 border border-[#5E718B] text-[#5E718B] rounded-full text-sm font-medium hover:bg-[#5E718B] hover:text-white transition shadow-sm">檢視檔案</a>
+                    </div>
+                    <div class="collego-card p-8 shadow-md hover:shadow-xl">
+                        <div class="text-xs font-bold text-[#8E9AAF] mb-3">高三 GRADE 12</div>
+                        <h3 class="text-xl font-bold text-[#4A4E69] mb-4">綜合應用成果</h3>
+                        <p class="text-sm text-gray-600 mb-8 leading-relaxed">總結高中三年的學習心得與成果。</p>
+                        <a href="#" class="inline-block px-6 py-2 border border-[#5E718B] text-[#5E718B] rounded-full text-sm font-medium hover:bg-[#5E718B] hover:text-white transition shadow-sm">檢視檔案</a>
+                    </div>
                 </div>
             `;
             container.appendChild(section);
         });
 
-        // 頁面切換與動畫
         function showSection(sectionId) {
             document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active-section'));
             const target = document.getElementById(sectionId);
             if (target) {
                 target.classList.add('active-section');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
-                // 使用更優雅的 GSAP 進入動畫
                 gsap.fromTo(target, 
                     { opacity: 0, y: 30, scale: 0.98 }, 
                     { duration: 0.8, opacity: 1, y: 0, scale: 1, ease: "back.out(1.2)", clearProps: "all" }
@@ -222,7 +233,6 @@
             }
         }
 
-        // 初始動畫
         window.onload = () => {
             gsap.from("#hero-title", { duration: 1.5, y: 40, opacity: 0, ease: "power2.out" });
             gsap.from("#intro-content", {
